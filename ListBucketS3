@@ -11,5 +11,5 @@ client = boto3.client('s3')
 output = client.list_objects(Bucket=bucket, Prefix=prefix, Delimiter='/')
 
 for i in output.get('CommonPrefixes'):
-    print 'objects : ', i.get('Prefix')
+    print 'my objects : ', i.get('Prefix')
 
