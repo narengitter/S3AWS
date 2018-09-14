@@ -8,6 +8,8 @@ prefix = 'mynewfolders/'
 
 client = boto3.client('s3')
 
+## https://docs.aws.amazon.com/AmazonS3/latest/API/v2-RESTBucketGET.html
+
 output = client.list_objects(Bucket=bucket, Prefix=prefix, Delimiter='/')
 
 for i in output.get('CommonPrefixes'):
